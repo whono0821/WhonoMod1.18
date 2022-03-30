@@ -2,7 +2,7 @@ package whono.whonomod
 
 import com.mojang.logging.LogUtils
 import net.minecraftforge.fml.common.Mod
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext
+import whono.whonomod.setup.Registration
 
 @Mod(WhonoMod.MODID)
 class WhonoMod {
@@ -14,6 +14,6 @@ class WhonoMod {
 
     init {
 
-        val eventBus = FMLJavaModLoadingContext.get().modEventBus
+        Registration.register()
     }
 }
